@@ -14,11 +14,13 @@ public class MainPage extends AppCompatActivity {
 
 
         //Localizar los controles
+        TextView txtApi = (TextView)findViewById(R.id.txtApi);
         TextView txtSaludo = (TextView)findViewById(R.id.lblSaludo);
         //Recuperamos la información pasada en el intent
         Bundle bundle = this.getIntent().getExtras();
 
+        txtApi.setText(bundle.getString("Api"));
         //Construimos el mensaje a mostrar
-         txtSaludo.setText(bundle.getString("NOMBRE"));
+         txtSaludo.setText(bundle.getString("Info"));
     }
 }

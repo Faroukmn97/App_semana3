@@ -108,7 +108,7 @@
         app:srcCompat="@mipmap/logo" />
 
     <TextView
-        android:id="@+id/lblNombre"
+        android:id="@+id/lblid"
         android:layout_width="44dp"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
@@ -116,7 +116,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginStart="20dp"
         android:layout_marginTop="388dp"
-        android:text="@string/lbl_Nombre"
+        android:text="@string/lbl_id"
         android:textSize="34sp"
         android:textStyle="bold" />
 
@@ -159,9 +159,10 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="78dp"
-        android:layout_marginTop="380dp"
+        android:layout_marginStart="75dp"
+        android:layout_marginTop="385dp"
         android:ems="10"
-        android:inputType="textPersonName" />
+        android:inputType="textPersonName"
+        android:textSize="34sp" />
 
 </RelativeLayout>

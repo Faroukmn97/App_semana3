@@ -98,9 +98,8 @@ public class MainActivity extends AppCompatActivity {
 
                 //Creamos la información a pasar entre actividades - Pares Key-Value
                 Bundle b = new Bundle();
-                b.putString("NOMBRE", Info);
-
-
+                b.putString("Api", "API Retrofit");
+                b.putString("Info", Info);
                 //Añadimos la información al intent
                 intent.putExtras(b);
                 // Iniciamos la nueva actividad
@@ -129,8 +128,7 @@ public class MainActivity extends AppCompatActivity {
                             for(int i=0; i < Ja.length(); i++)
                             {
                                 JSONObject jsonObject = new JSONObject(Ja.get(i).toString());
-                                Info+=  "API Volley" + "\n\n\n"+
-                                        "ID:"+jsonObject.getString("issue_id")+" |-| "+
+                                Info+=  "ID:"+jsonObject.getString("issue_id")+" |-| "+
                                         "Volumen:"+jsonObject.getString("volume")+" |-| "+
                                         "Número:"+jsonObject.getString("number")+" |-| "+
                                         "Año:"+jsonObject.getString("year")+" |-| "+
@@ -144,7 +142,8 @@ public class MainActivity extends AppCompatActivity {
                         }
                         Intent intent = new Intent(MainActivity.this, MainPage.class);
                         Bundle b = new Bundle();
-                        b.putString("NOMBRE", Info);
+                        b.putString("Api", "API Volley");
+                        b.putString("Info", Info);
                         intent.putExtras(b);
                         startActivity(intent);
                     }

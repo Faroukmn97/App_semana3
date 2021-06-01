@@ -26,11 +26,11 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="612dp"
+        android:layout_height="551dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_marginStart="0dp"
-        android:layout_marginTop="119dp">
+        android:layout_marginTop="180dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -43,8 +43,22 @@
                 android:layout_height="match_parent"
                 android:layout_marginStart="0dp"
                 android:layout_marginTop="48dp"
-                android:text="@string/lbl_Nombre"
                 android:textAlignment="textStart" />
+
         </LinearLayout>
     </ScrollView>
+
+    <TextView
+        android:id="@+id/txtApi"
+        android:layout_width="wrap_content"
+        android:layout_height="57dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="-2dp"
+        android:layout_marginTop="126dp"
+        android:layout_marginEnd="2dp"
+        android:text="API"
+        android:textSize="34sp"
+        android:textStyle="bold" />
+
 </RelativeLayout>
