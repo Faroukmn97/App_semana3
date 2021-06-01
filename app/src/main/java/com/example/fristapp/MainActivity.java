@@ -83,8 +83,7 @@ public class MainActivity extends AppCompatActivity {
                 Info = "";
                  for(Journal str : lj )
                 {
-                    Info+=  "API Retrofit" + "\n\n\n"+
-                            "ID:"+str.getIssue_id()+" |-| "+
+                    Info+=  "ID:"+str.getIssue_id()+" |-| "+
                             "Volumen:"+str.getVolume()+" |-| "+
                             "Número:"+str.getNumber()+" |-| "+
                             "Año:"+str.getYear()+" |-| "+
