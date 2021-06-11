@@ -24,30 +24,6 @@
         android:textSize="30sp"
         android:textStyle="bold" />
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="646dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="0dp"
-        android:layout_marginTop="85dp">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/lblSaludo"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginStart="0dp"
-                android:layout_marginTop="48dp"
-                android:textAlignment="textStart" />
-
-        </LinearLayout>
-    </ScrollView>
-
     <TextView
         android:id="@+id/txtApi"
         android:layout_width="409dp"
@@ -61,5 +37,14 @@
         android:text="API"
         android:textSize="34sp"
         android:textStyle="bold" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/ListRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="648dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="84dp" />
 
 </RelativeLayout>

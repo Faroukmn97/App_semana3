@@ -140,10 +140,10 @@ public class MainActivity extends AppCompatActivity {
                             e.printStackTrace();
                         }
                         Intent intent = new Intent(MainActivity.this, MainPage.class);
-                        Bundle b = new Bundle();
-                        b.putString("Api", "API Volley");
-                        b.putString("Info", Info);
-                        intent.putExtras(b);
+                       // Bundle b = new Bundle();
+                      //  b.putString("Api", "API Volley");
+                      //  b.putString("Info", Info);
+                      //  intent.putExtras(b);
                         startActivity(intent);
                     }
                 },
