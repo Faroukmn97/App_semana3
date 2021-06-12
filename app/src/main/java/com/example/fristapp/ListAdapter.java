@@ -45,14 +45,14 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder>{
         ImageView iconImage;
         TextView issue_id, volume, number,year,date_published,title,doi,cover;
 
-        ViewHolder(View itemsView){
+        ViewHolder(View itemsView) {
             super(itemsView);
             iconImage = itemView.findViewById(R.id.iconImageView);
             title = itemView.findViewById(R.id.nameTitleTextView);
             date_published = itemView.findViewById(R.id.dateTextview);
             volume = itemView.findViewById(R.id.volumeTextView);
-
-
+            year = itemView.findViewById(R.id.YearTextView);
+            doi = itemView.findViewById(R.id.DoiTextView);
         }
 
         void bindData(final ElementJournalList item){
@@ -60,6 +60,8 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder>{
             title.setText(item.getTitle());
             date_published.setText(item.getDate_published());
             volume.setText(item.getVolume());
+            year.setText(item.getYear());
+            doi.setText(item.getDoi());
             Glide.with(context).load(item.getCover()).into(iconImage);
         }
     }

@@ -41,10 +41,10 @@ public class MainPage extends AppCompatActivity {
                 for(int i=0; i < Ja.length(); i++)
                 {
                     JSONObject jsonObject = new JSONObject(Ja.get(i).toString());
-                    elements.add(new ElementJournalList(jsonObject.getString("issue_id"), jsonObject.getString("volume"),
-                            jsonObject.getString("number"),jsonObject.getString("year"),
-                            jsonObject.getString("date_published"),jsonObject.getString("title"),
-                            jsonObject.getString("doi"),jsonObject.getString("cover")));
+                    elements.add(new ElementJournalList(jsonObject.getString("issue_id"), "Volumen: "+ jsonObject.getString("volume"),
+                            jsonObject.getString("number"), "Año: " + jsonObject.getString("year"),
+                            "Publicación: "+jsonObject.getString("date_published"),jsonObject.getString("title"),
+                            "DOI: "+jsonObject.getString("doi"),jsonObject.getString("cover")));
                 }
                 ListAdapter listAdapter = new ListAdapter(elements, this);
                 RecyclerView recyclerView = findViewById(R.id.ListRecyclerView);

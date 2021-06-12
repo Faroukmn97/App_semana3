@@ -21,13 +21,13 @@
 
             <ImageView
                 andriod:id="@+id/iconImageView"
-                andriod:layout_width="80dp"
-                andriod:layout_height="80dp"
+                andriod:layout_width="95dp"
+                andriod:layout_height="95dp"
                 andriod:layout_alignParentStart="true"
                 andriod:layout_centerVertical="true"
                 andriod:layout_gravity="center"
-                andriod:paddingLeft="14dp"
-                andriod:paddingRight="14dp"
+                andriod:paddingLeft="10dp"
+                andriod:paddingRight="10dp"
                 andriod:scaleType="centerCrop"
                 app:srcCompat="@drawable/ic_library_books_black_24dp"
                 andriod:layout_alignParentLeft="true" />
@@ -62,6 +62,18 @@
                     andriod:layout_width="match_parent"
                     andriod:layout_height="wrap_content"
                     andriod:text="Volumen"
+                    andriod:textSize="16sp" />
+                <TextView
+                    andriod:id="@+id/YearTextView"
+                    andriod:layout_width="match_parent"
+                    andriod:layout_height="wrap_content"
+                    andriod:text="Year"
+                    andriod:textSize="16sp" />
+                <TextView
+                    andriod:id="@+id/DoiTextView"
+                    andriod:layout_width="match_parent"
+                    andriod:layout_height="wrap_content"
+                    andriod:text="DOI"
                     andriod:textSize="16sp" />
 
             </LinearLayout>
