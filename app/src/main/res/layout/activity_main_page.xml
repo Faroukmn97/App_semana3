@@ -5,8 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainPage">
-
-
     <TextView
         android:id="@+id/lblTitulo3"
         android:layout_width="match_parent"
@@ -24,27 +22,13 @@
         android:textSize="30sp"
         android:textStyle="bold" />
 
-    <TextView
-        android:id="@+id/txtApi"
-        android:layout_width="409dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="2dp"
-        android:layout_marginTop="39dp"
-        android:layout_marginEnd="0dp"
-        android:text="API"
-        android:textSize="34sp"
-        android:textStyle="bold" />
-
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/ListRecyclerView"
         android:layout_width="match_parent"
-        android:layout_height="648dp"
+        android:layout_height="693dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_marginStart="0dp"
-        android:layout_marginTop="84dp" />
+        android:layout_marginTop="38dp" />
 
 </RelativeLayout>

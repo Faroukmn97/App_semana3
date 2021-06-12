@@ -1,6 +1,83 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<androidx.cardview.widget.CardView xmlns:andriod="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    andriod:id="@+id/cv"
+    andriod:layout_width="match_parent"
+    andriod:layout_height="wrap_content"
+    andriod:animateLayoutChanges="true"
+    app:cardCornerRadius="20dp"
+    app:cardElevation="4dp"
+    app:cardUseCompatPadding="true">
+    <LinearLayout
+        andriod:layout_width="match_parent"
+        andriod:layout_height="wrap_content"
+        andriod:animateLayoutChanges="true"
+        andriod:orientation="vertical">
+        <RelativeLayout
+            andriod:layout_width="match_parent"
+            andriod:layout_height="wrap_content"
+            andriod:orientation="horizontal"
+            andriod:padding="6dp">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+            <ImageView
+                andriod:id="@+id/iconImageView"
+                andriod:layout_width="80dp"
+                andriod:layout_height="80dp"
+                andriod:layout_alignParentStart="true"
+                andriod:layout_centerVertical="true"
+                andriod:layout_gravity="center"
+                andriod:paddingLeft="14dp"
+                andriod:paddingRight="14dp"
+                andriod:scaleType="centerCrop"
+                app:srcCompat="@drawable/ic_library_books_black_24dp"
+                andriod:layout_alignParentLeft="true" />
+
+            <LinearLayout
+                andriod:id="@+id/linearLayout"
+                andriod:layout_width="match_parent"
+                andriod:layout_height="wrap_content"
+                andriod:layout_alignParentTop="true"
+                andriod:layout_marginTop="2dp"
+                andriod:layout_toRightOf="@+id/iconImageView"
+                andriod:orientation="vertical"
+                andriod:layout_marginLeft="4dp">
+                <TextView
+                    andriod:id="@+id/nameTitleTextView"
+                    andriod:layout_width="match_parent"
+                    andriod:layout_height="wrap_content"
+                    andriod:layout_marginBottom="2dp"
+                    andriod:text="Titulo"
+                    andriod:textColor="@android:color/black"
+                    andriod:textSize="20sp"
+                    andriod:textStyle="bold"/>
+
+                <TextView
+                    andriod:id="@+id/dateTextview"
+                    andriod:layout_width="match_parent"
+                    andriod:layout_height="wrap_content"
+                    andriod:text="Fecha"
+                    andriod:textSize="16sp" />
+                <TextView
+                    andriod:id="@+id/volumeTextView"
+                    andriod:layout_width="match_parent"
+                    andriod:layout_height="wrap_content"
+                    andriod:text="Volumen"
+                    andriod:textSize="16sp" />
+
+            </LinearLayout>
+
+         <!--   <TextView
+                andriod:id="@+id/volumeTextView"
+                andriod:layout_width="wrap_content"
+                andriod:layout_height="wrap_content"
+                andriod:layout_centerVertical="true"
+                andriod:layout_marginEnd="6dp"
+                andriod:layout_marginRight="6dp"
+                andriod:text="Editorial"
+                andriod:textSize="20sp"
+                andriod:textStyle="bold"
+                andriod:layout_alignParentRight="true"
+                andriod:layout_alignParentEnd="true"/> -->
+        </RelativeLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

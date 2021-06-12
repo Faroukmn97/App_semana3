@@ -1,6 +1,6 @@
-package com.example.fristapp.models;
+package com.example.fristapp;
 
-public class Journal {
+public class ElementJournalList {
     private String issue_id;
     private String volume;
     private String number;
@@ -10,7 +10,16 @@ public class Journal {
     private String doi;
     private String cover;
 
-
+    public ElementJournalList(String issue_id, String volume, String number, String year, String date_published, String title, String doi, String cover) {
+        this.issue_id = issue_id;
+        this.volume = volume;
+        this.number = number;
+        this.year = year;
+        this.date_published = date_published;
+        this.title = title;
+        this.doi = doi;
+        this.cover = cover;
+    }
 
     public String getIssue_id() {
         return issue_id;
@@ -75,6 +84,4 @@ public class Journal {
     public void setCover(String cover) {
         this.cover = cover;
     }
-
-
 }

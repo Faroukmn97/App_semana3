@@ -1,6 +1,7 @@
 package com.example.fristapp;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -23,6 +24,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -37,9 +39,10 @@ public class MainActivity extends AppCompatActivity {
     EditText txtNombre;
     String Info="";
     TextView contexto;
-    Button btnBuscar;
+  //  Button btnBuscar;
     Button btnBuscar2;
     RequestQueue requestQueue;
+
     private static final String URL="https://revistas.uteq.edu.ec/ws/issues.php?j_id=";
 
     @Override
@@ -49,16 +52,18 @@ public class MainActivity extends AppCompatActivity {
 
          txtNombre =  (EditText)findViewById(R.id.txtNombre);
 
-        btnBuscar = findViewById(R.id.btn_enviar1);
+      //  btnBuscar = findViewById(R.id.btn_enviar1);
         btnBuscar2 = findViewById(R.id.btn_enviar2);
 
-        btnBuscar.setOnClickListener(new View.OnClickListener(){
+     /*   btnBuscar.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
                 find(txtNombre.getText().toString());
 
             }
         });
+
+      */
 
         btnBuscar2.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -122,29 +127,37 @@ public class MainActivity extends AppCompatActivity {
                     public void onResponse(String response) {
                         int size = response.length();
                         Info = "";
+                        /*
                         try {
+
                             JSONArray Ja = new JSONArray(response);
                             for(int i=0; i < Ja.length(); i++)
                             {
                                 JSONObject jsonObject = new JSONObject(Ja.get(i).toString());
-                                Info+=  "ID:"+jsonObject.getString("issue_id")+" |-| "+
-                                        "Volumen:"+jsonObject.getString("volume")+" |-| "+
-                                        "Número:"+jsonObject.getString("number")+" |-| "+
-                                        "Año:"+jsonObject.getString("year")+" |-| "+
-                                        "Fecha de publicación:"+jsonObject.getString("date_published")+" |-| "+
-                                        "Titulo:"+jsonObject.getString("title")+" |-| "+
-                                        "DOI:"+jsonObject.getString("doi")+" |-| "+
-                                        "Portada:"+jsonObject.getString("cover")+"\n\n";
+
                             }
+                            Intent intent = new Intent(MainActivity.this, MainPage.class);
+                             Bundle b = new Bundle();
+                            b.putString("json",response);
+                            //  b.putString("Api", "API Volley");
+                            //  b.putString("Info", Info);
+                                      intent.putExtras(b);
+
+                            startActivity(intent);
                         } catch (JSONException e) {
                             e.printStackTrace();
+                        }*/
+                        try {
+                         Intent intent = new Intent(MainActivity.this, MainPage.class);
+                         Bundle b = new Bundle();
+                         b.putString("json",response);
+                         //  b.putString("Api", "API Volley");
+                         //  b.putString("Info", Info);
+                         intent.putExtras(b);
+                         startActivity(intent);
+                        } catch (Exception e) {
+                            e.printStackTrace();
                         }
-                        Intent intent = new Intent(MainActivity.this, MainPage.class);
-                       // Bundle b = new Bundle();
-                      //  b.putString("Api", "API Volley");
-                      //  b.putString("Info", Info);
-                      //  intent.putExtras(b);
-                        startActivity(intent);
                     }
                 },
                 new com.android.volley.Response.ErrorListener() {
@@ -156,4 +169,5 @@ public class MainActivity extends AppCompatActivity {
         );
         requestQueue.add(request);
     }
+
 }
