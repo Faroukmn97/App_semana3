@@ -53,15 +53,16 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder>{
             volume = itemView.findViewById(R.id.volumeTextView);
             year = itemView.findViewById(R.id.YearTextView);
             doi = itemView.findViewById(R.id.DoiTextView);
+            number = itemView.findViewById(R.id.NumberTextView);
         }
 
         void bindData(final ElementJournalList item){
-         //   iconImage.setColorFilter(Color.parseColor(item.getColor()), PorterDuff.Mode.SRC_IN);
             title.setText(item.getTitle());
             date_published.setText(item.getDate_published());
             volume.setText(item.getVolume());
             year.setText(item.getYear());
             doi.setText(item.getDoi());
+            number.setText(item.getNumber());
             Glide.with(context).load(item.getCover()).into(iconImage);
         }
     }

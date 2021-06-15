@@ -5,15 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"><![CDATA[ />
-
-
-
-
-
-
-
     ]]>
-
     <Button
         android:id="@+id/btn_enviar2"
         android:layout_width="258dp"

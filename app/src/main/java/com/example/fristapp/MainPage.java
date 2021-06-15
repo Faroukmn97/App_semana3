@@ -42,7 +42,7 @@ public class MainPage extends AppCompatActivity {
                 {
                     JSONObject jsonObject = new JSONObject(Ja.get(i).toString());
                     elements.add(new ElementJournalList(jsonObject.getString("issue_id"), "Volumen: "+ jsonObject.getString("volume"),
-                            jsonObject.getString("number"), "Año: " + jsonObject.getString("year"),
+                            "Number: "+ jsonObject.getString("number"), "Año: " + jsonObject.getString("year"),
                             "Publicación: "+jsonObject.getString("date_published"),jsonObject.getString("title"),
                             "DOI: "+jsonObject.getString("doi"),jsonObject.getString("cover")));
                 }

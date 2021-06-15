@@ -5,8 +5,8 @@
     andriod:layout_width="match_parent"
     andriod:layout_height="wrap_content"
     andriod:animateLayoutChanges="true"
-    app:cardCornerRadius="20dp"
-    app:cardElevation="4dp"
+    app:cardCornerRadius="25dp"
+    app:cardElevation="6dp"
     app:cardUseCompatPadding="true">
     <LinearLayout
         andriod:layout_width="match_parent"
@@ -18,7 +18,6 @@
             andriod:layout_height="wrap_content"
             andriod:orientation="horizontal"
             andriod:padding="6dp">
-
             <ImageView
                 andriod:id="@+id/iconImageView"
                 andriod:layout_width="95dp"
@@ -70,6 +69,12 @@
                     andriod:text="Year"
                     andriod:textSize="16sp" />
                 <TextView
+                    andriod:id="@+id/NumberTextView"
+                    andriod:layout_width="match_parent"
+                    andriod:layout_height="wrap_content"
+                    andriod:text="Number"
+                    andriod:textSize="16sp" />
+                <TextView
                     andriod:id="@+id/DoiTextView"
                     andriod:layout_width="match_parent"
                     andriod:layout_height="wrap_content"
@@ -77,19 +82,6 @@
                     andriod:textSize="16sp" />
 
             </LinearLayout>
-
-         <!--   <TextView
-                andriod:id="@+id/volumeTextView"
-                andriod:layout_width="wrap_content"
-                andriod:layout_height="wrap_content"
-                andriod:layout_centerVertical="true"
-                andriod:layout_marginEnd="6dp"
-                andriod:layout_marginRight="6dp"
-                andriod:text="Editorial"
-                andriod:textSize="20sp"
-                andriod:textStyle="bold"
-                andriod:layout_alignParentRight="true"
-                andriod:layout_alignParentEnd="true"/> -->
         </RelativeLayout>
     </LinearLayout>
 </androidx.cardview.widget.CardView>
