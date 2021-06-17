@@ -25,12 +25,12 @@ public class MainPage extends AppCompatActivity {
         setContentView(R.layout.activity_main_page);
 
         Bundle bundle = this.getIntent().getExtras();
-        init(bundle.getString("json"));
+        proceso(bundle.getString("json"));
 
 
     }
 
-    public void init(String json){
+    public void proceso(String json){
         elements = new ArrayList<>();
         int size = json.length();
 

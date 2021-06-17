@@ -39,8 +39,6 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder>{
         holder.bindData(mData.get(position));
     }
 
-    public void setItem(List<ElementJournalList> items){ mData = items; }
-
     public class ViewHolder extends RecyclerView.ViewHolder{
         ImageView iconImage;
         TextView issue_id, volume, number,year,date_published,title,doi,cover;
